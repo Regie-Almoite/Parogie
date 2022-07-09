@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- <link rel="stylesheet" href="" /> -->
+
+        <script
+            src="https://kit.fontawesome.com/a15ff02c89.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <style>
+            * {
+                outline: 1px solid black;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="booking">
+            <div class="bookingForm">
+                <div class="arrival">
+                    <h2>Arrival</h2>
+                    <form action="#">
+                        <div style="position: relative">
+                            <p id="arrivalMonth">January</p>
+                            <select
+                                name="arrivalSelectMonth"
+                                id="arrivalSelectMonth"
+                                style="
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                "
+                            ></select>
+                        </div>
+                        <div style="position: relative">
+                            <p id="arrivalDay">1</p>
+                            <select
+                                name="arrivalSelectDay"
+                                id="arrivalSelectDay"
+                                style="
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                "
+                            ></select>
+                        </div>
+                    </form>
+                </div>
+                <div class="departure">
+                    <h2>Departure</h2>
+                    <form action="#">
+                        <div style="position: relative">
+                            <p id="departureMonth">January</p>
+                            <select
+                                name="departureSelectMonth"
+                                id="departureSelectMonth"
+                                style="
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                "
+                            ></select>
+                        </div>
+                        <div style="position: relative">
+                            <p id="departureDay">1</p>
+                            <select
+                                name="departureSelectDay"
+                                id="departureSelectDay"
+                                style="
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                "
+                            ></select>
+                        </div>
+                    </form>
+                </div>
+                <div class="guest">
+                    <h2>Guest</h2>
+                    <form action="#">
+                        <div style="position: relative">
+                            <p id="guest">1</p>
+                            <select
+                                name="guestCount"
+                                id="guestCount"
+                                style="
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                "
+                            >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="roomList">
+                <h2>Room List</h2>
+                <!-- <div>
+                    <h3>Room Name</h3>
+                    <p>Capacity <span>4</span></p>
+                    <div>
+                        <p>Amenities</p>
+                        <ul>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="bookNowBtn">Book Now</button>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Script -->
+        <script type="module" src="./js/roomsMain.js"></script>
+    </body>
+</html>
