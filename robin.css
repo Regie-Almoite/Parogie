@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: playfair-display !important;
+}
+
+.bg-bluegreen {
+  color: #12425a;
+}
+
+#about {
+  padding: 230px 230px;
+  background-image: url(./images/1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #12425a;
+  background-blend-mode: overlay;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #about {
+    padding: 100px 50px !important;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  #about {
+    padding: 100px 0px !important;
+  }
+}
+
+.container2 {
+  padding: 100px 120px;
+  margin-top: -150px !important;
+  z-index: 1 !important;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container2 {
+    padding: 50px 0px !important;
+    margin-top: -70px !important;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  .container2 {
+    padding: 50px 10px !important;
+    margin-top: -70px !important;
+  }
+}
+
+.mycarousel {
+  padding-top: 80px !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .mycarousel {
+    padding-top: 30px !important;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 414px) {
+  .mycarousel {
+    padding-top: 30px !important;
+  }
+}
+
+.mytext {
+  font-family: montserrat !important;
+  font-weight: 300;
+}
+
+.mypaddingtop {
+  padding-top: 80px;
+}
+
+.myimg {
+  width: 250px;
+}
+
+.about3 {
+  background-color: #eeeeee !important;
+}
+
+.img3 {
+  width: 550px;
+}
+
+.textpadding {
+  padding: 30px !important;
+}
+
+.container3 {
+  padding: 100px 230px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container3 {
+    padding: 50px 0px !important;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  .container3 {
+    padding: 50px 10px !important;
+  }
+}
+
+.container4 {
+  padding: 0px 230px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container4 {
+    padding: 50px 0px !important;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  .container4 {
+    padding: 20px 10px !important;
+  }
+}
+
+/*Home  */
+
+#slider {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.text-gold {
+  color: #ceb070 !important;
+}
+
+.carousel-bg1 {
+  background-image: url(./images/8.jpg) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 100px 40px;
+  background-color: #4c6e92;
+  background-blend-mode: overlay;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel-bg1,
+  .carousel-bg2,
+  .carousel-bg3 {
+    padding: 100px 40px !important;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  .carousel-bg1,
+  .carousel-bg2,
+  .carousel-bg3 {
+    padding: 100px 10px !important;
+  }
+}
+
+.slide-text {
+  font-size: 80px !important;
+}
+
+.slide-padding {
+  padding-top: 100px !important;
+}
+
+.mybutton {
+  border: solid 1px lightcyan !important;
+  padding: 30px 30px 30px 30px;
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+
+.mybutton:hover {
+  background-color: lightcyan !important;
+  color: black !important;
+  transition: 0.5s ease;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .mybutton {
+    padding: 10px 10px 10px 10p !important;
+  }
+}
+
+/*  */
+
+.carousel-bg2 {
+  background-image: url(./images/2.jpg) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 100px 40px;
+  background-color: #4c6e92;
+  background-blend-mode: overlay;
+}
+
+.carousel-bg3 {
+  background-image: url(./images/1.jpg) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 100px 40px;
+  background-color: #4c6e92;
+  background-blend-mode: overlay;
+}
+
+#accomodation {
+  padding: 100px 100px;
+  z-index: 1;
+}
+
+.mybutton2 {
+  border: solid 1px black !important;
+  padding: 10px;
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+
+.mybutton2:hover {
+  background-color: rgb(31, 29, 29);
+  transition: 0.5s ease;
+  color: white;
+}
+
+.accomodationbtn {
+  padding: 10px;
+  color: white;
+  background-color: #00486c;
+  border: solid 1px #00486c;
+}
+
+#spacing {
+  padding: 200px 0;
+  background-color: #00486c;
+  margin-top: -400px !important;
+}
