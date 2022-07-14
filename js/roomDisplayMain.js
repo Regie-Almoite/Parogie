@@ -38,3 +38,35 @@ displayArrivalDates(monthList);
 displayArrivalMonths(monthList);
 displayDepartureMonths(monthList);
 displayDepartureDates(monthList);
+
+let roomTitleDisplay = document.getElementById("roomTitle");
+roomTitleDisplay.textContent = bookingData.roomDetails.roomName;
+
+let guestCapacityDisplay = document.getElementById("guestCapacity");
+let bedsDisplay = document.getElementById("beds");
+let telephoneDisplay = document.getElementById("telephone");
+let airConditionDisplay = document.getElementById("airConditioned");
+let wirelessDisplay = document.getElementById("wirelessInternet");
+
+let overviewDisplay = document.getElementById("overview");
+
+guestCapacityDisplay.textContent = bookingData.roomDetails.capacity;
+bedsDisplay.textContent = bookingData.roomDetails.amenities[0];
+telephoneDisplay.textContent = bookingData.roomDetails.amenities[1];
+airConditionDisplay.textContent = bookingData.roomDetails.amenities[2];
+wirelessDisplay.textContent = bookingData.roomDetails.amenities[3];
+
+overviewDisplay.textContent = bookingData.roomDetails.roomDescription;
+
+let bookBtn = document.getElementById("bookButton");
+
+bookBtn.addEventListener("click", () => {
+    bookingData.aDay = arrivalDayDisplay.innerHTML;
+    bookingData.aMonth = arrivalMonthDisplay.innerHTML;
+    bookingData.dMonth = departureMonthDisplay.innerHTML;
+    bookingData.dDay = departureDayDisplay.innerHTML;
+
+    localStorage.setItem("bookData", JSON.stringify(bookingData));
+
+    console.log(bookingData);
+});

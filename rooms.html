@@ -6,107 +6,64 @@
         <title></title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- <link rel="stylesheet" href="" /> -->
+        <link rel="stylesheet" href="./css/room.min.css" />
 
         <script
             src="https://kit.fontawesome.com/a15ff02c89.js"
             crossorigin="anonymous"
         ></script>
-
-        <style>
-            * {
-                outline: 1px solid black;
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-            }
-        </style>
     </head>
     <body>
-        <div class="booking">
-            <div class="bookingForm">
-                <div class="arrival">
+        <div class="box-left"></div>
+        <div class="booking-container">
+            <div class="image-container">
+                <img src="./images/resortImg.jpg" alt="" />
+            </div>
+            <div class="inputs-container">
+                <div class="arrival-container">
                     <h2>Arrival</h2>
                     <form action="#">
-                        <div style="position: relative">
+                        <div class="arrivalMonth-container">
                             <p id="arrivalMonth">January</p>
                             <select
                                 name="arrivalSelectMonth"
                                 id="arrivalSelectMonth"
-                                style="
-                                    width: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    opacity: 0;
-                                "
                             ></select>
                         </div>
-                        <div style="position: relative">
+                        <div class="arrivalDay-container">
                             <p id="arrivalDay">1</p>
                             <select
                                 name="arrivalSelectDay"
                                 id="arrivalSelectDay"
-                                style="
-                                    width: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    opacity: 0;
-                                "
                             ></select>
                         </div>
                     </form>
                 </div>
-                <div class="departure">
+                <div class="departure-container">
                     <h2>Departure</h2>
                     <form action="#">
-                        <div style="position: relative">
+                        <div class="departureMonth-container">
                             <p id="departureMonth">January</p>
                             <select
                                 name="departureSelectMonth"
                                 id="departureSelectMonth"
-                                style="
-                                    width: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    opacity: 0;
-                                "
                             ></select>
                         </div>
-                        <div style="position: relative">
+                        <div class="departureDay-container">
                             <p id="departureDay">1</p>
                             <select
                                 name="departureSelectDay"
                                 id="departureSelectDay"
-                                style="
-                                    width: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    opacity: 0;
-                                "
                             ></select>
                         </div>
                     </form>
                 </div>
-                <div class="guest">
+                <div class="guest-container">
                     <h2>Guest</h2>
                     <form action="#">
-                        <div style="position: relative">
+                        <div class="guestCount-container">
                             <p id="guest">1</p>
-                            <select
-                                name="guestCount"
-                                id="guestCount"
-                                style="
-                                    width: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    opacity: 0;
-                                "
-                            >
+                            <select name="guestCount" id="guestCount">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -117,9 +74,13 @@
                     </form>
                 </div>
             </div>
-            <div id="roomList">
-                <h2>Room List</h2>
-                <!-- <div>
+        </div>
+        <div class="roomList-container">
+            <div class="roomListTitle-container">
+                <h2 class="roomList-title">Book a Room</h2>
+            </div>
+            <div class="rooms-container" id="roomList"></div>
+            <!-- <div
                     <h3>Room Name</h3>
                     <p>Capacity <span>4</span></p>
                     <div>
@@ -145,7 +106,6 @@
                     </div>
                     <button class="bookNowBtn">Book Now</button>
                 </div> -->
-            </div>
         </div>
 
         <!-- Script -->

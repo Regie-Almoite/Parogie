@@ -34,6 +34,8 @@ let roomList = [
         roomId: 0,
         capacity: 4,
         // availability: "available",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",
@@ -47,6 +49,8 @@ let roomList = [
         roomId: 1,
         capacity: 4,
         // availability: "unavailable",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",
@@ -60,6 +64,8 @@ let roomList = [
         roomId: 2,
         capacity: 5,
         // availability: "unavailable",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",
@@ -73,6 +79,8 @@ let roomList = [
         roomId: 3,
         capacity: 5,
         // availability: "unavailable",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",
@@ -86,6 +94,8 @@ let roomList = [
         roomId: 4,
         capacity: 5,
         // availability: "available",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",
@@ -99,6 +109,8 @@ let roomList = [
         roomId: 5,
         capacity: 2,
         // availability: "available",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",
@@ -112,6 +124,8 @@ let roomList = [
         roomId: 6,
         capacity: 3,
         // availability: "available",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",
@@ -125,6 +139,8 @@ let roomList = [
         roomId: 7,
         capacity: 1,
         // availability: "available",
+        roomDescription:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus inventore voluptates eveniet veniam eum velit obcaecati, impedit facilis quo enim a! Voluptatem consequatur excepturi illo delectus qui sapiente id.",
         amenities: [
             "Beds",
             "Telephone",

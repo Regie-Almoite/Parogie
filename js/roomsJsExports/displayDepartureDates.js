@@ -7,6 +7,7 @@ function displayDepartureDates(months) {
     let selectDay = document.getElementById("departureSelectDay");
     let selectedMonth;
     let days;
+    let options = "";
 
     for (let x in months) {
         if (months[x] == selectMonthDisplay.textContent) {
@@ -15,17 +16,18 @@ function displayDepartureDates(months) {
     }
 
     for (let i = 1; i <= days; i++) {
-        let dayOption = document.createElement("option");
-        dayOption.value = i;
-        dayOption.textContent = i;
-        selectDay.appendChild(dayOption);
+        options += `<option value="${i}">${i}</option>`;
     }
+
+    selectDay.innerHTML = options;
 
     selectDay.addEventListener("change", () => {
         selectDayDisplay.textContent = selectDay.value;
     });
 
+    // Render the days after selecting different months
     selectMonth.addEventListener("change", () => {
+        options = "";
         selectedMonth = selectMonth.value;
         selectMonthDisplay.textContent = selectedMonth;
 
@@ -36,10 +38,7 @@ function displayDepartureDates(months) {
         }
 
         for (let i = 1; i <= days; i++) {
-            let dayOption = document.createElement("option");
-            dayOption.value = i;
-            dayOption.textContent = i;
-            selectDay.appendChild(dayOption);
+            options += `<option value="${i}">${i}</option>`;
         }
 
         selectDay.addEventListener("change", () => {
