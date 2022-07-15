@@ -1,0 +1,176 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="robin.css" />
+  </head>
+  <body>
+    <section id="formSection">
+      <div class="container">
+        <form action="#" method="">
+          <div class="d-flex flex-column flex-md-row mytext mb-3">
+            <input
+              type="text"
+              id="firstname"
+              placeholder="First name:*"
+              class="form-control mytext mx-1 mt-3"
+            />
+            <input
+              type="text"
+              id="lastname"
+              placeholder="Last name:*"
+              class="form-control ms-1 mytext mt-3"
+            />
+          </div>
+
+          <input
+            type="text"
+            id="company"
+            placeholder="Company name:"
+            class="form-control mytext mx-1"
+          />
+          <div class="d-flex flex-column flex-md-row">
+            <input
+              type="text"
+              id="zipcode"
+              placeholder="Zip code: *"
+              class="form-control me-1 mt-3 mytext"
+            />
+            <input
+              type="text"
+              id="city"
+              placeholder="City:*"
+              class="form-control ms-1 mt-3 mytext"
+            />
+          </div>
+          <div class="d-flex flex-column flex-md-row">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email:*"
+              class="form-control me-1 mt-3 mytext"
+            />
+            <input
+              type="text"
+              id="phone"
+              placeholder="Phone:*"
+              class="form-control ms-1 mt-3 mytext"
+            />
+          </div>
+          <div class="pt-4">
+            <hr />
+          </div>
+          <div class="pt-4 d-flex flex-row">
+            <input type="radio" id="myradio" required />
+
+            <label for="" class="form-label mytext mt-2 ms-2"
+              >I have read and accepted the <a href="#" class="">terms</a>, as
+              well as read and understood our terms of
+              <a href="#" class="">business conditions</a></label
+            >
+          </div>
+          <div class="pt-4">
+            <h1>Choose payment</h1>
+          </div>
+          <div class="py-4">
+            <hr />
+          </div>
+          <div class="pt-4">
+            <input
+              type="radio"
+              name="Payment"
+              value="Credit"
+              onclick="paymentMethod('Credit')"
+            />
+            <label for="" class="fw-bold mytext">Pay via credit card</label
+            ><br />
+            <label for="" class="form-label mytext px-3"
+              >(MasterCard, Maestro, Visa, Visa Electron, JCB and American
+              Express)</label
+            ><br />
+            <input
+              type="radio"
+              name="Payment"
+              value="Paypal"
+              onclick="paypalMethod('Paypal')"
+            />
+            <label for="" class="fw-bold mytext">Paypal</label><br />
+            <label for="" class="form-label mytext px-3"
+              >Purchased with your fingertips. Look for us the next time you've
+              paying from a mobile app, and checkout faster on thousands of
+              mobile websites.</label
+            >
+          </div>
+
+          <div class="paymentDetails border border-1 p-5 mt-3">
+            <div class="d-flex justify-content-between">
+              <div><h1 class="mytext fs-5 fw-bold">Payment Details</h1></div>
+              <div>
+                <i class="fa-brands fa-cc-visa fs-1 bg-color"></i>
+                <i class="fa-brands fa-cc-mastercard fs-1"></i>
+                <i class="fa-brands fa-cc-discover fs-1"></i>
+                <i class="fa-brands fa-cc-amex fs-1"></i>
+              </div>
+            </div>
+            <div class="">
+              <div class="mt-3" id="cardUser">
+                <input
+                  type="text"
+                  id="cardNumber"
+                  class="form-control mytext"
+                  placeholder="e-Card Number"
+                />
+                <div class="d-flex mt-3">
+                  <input
+                    type="text"
+                    id="expiration"
+                    class="form-control mytext w-75 me-1"
+                    placeholder="MM/YY "
+                  />
+                  <input
+                    type="text"
+                    id="CVC"
+                    class="form-control mytext w-25 ms-1"
+                    placeholder="CVC"
+                  />
+                </div>
+              </div>
+              <div class="pt-2" id="paypalUser">
+                <div class="note p-3">
+                  <h5 class="mytext fw-normal">Note:</h5>
+                  <p class="mytext">
+                    Please allow three working days for the payment confirmation
+                    to reflect in your online account. Once your payment is
+                    confirmed, we will generate your e-invoice, which you can
+                    view/print from your account or email.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <input
+              type="submit"
+              value="SUMBIT"
+              class="mytext w-100 mt-3 submitBTN"
+              onclick="getForm()"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="./js/form.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3bdf664df4.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

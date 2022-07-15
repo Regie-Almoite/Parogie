@@ -243,3 +243,22 @@ body {
   background-color: #00486c;
   margin-top: -400px !important;
 }
+
+.submitBTN {
+  background-color: #00486c !important;
+  padding: 10px;
+  color: white;
+  border: solid 1px #00486c;
+  transition: 0.5s ease;
+}
+
+.submitBTN:hover {
+  background-color: transparent !important;
+  color: #00486c;
+  border: solid 1px #00486c;
+  transition: 0.5s ease;
+}
+
+#formSection {
+  padding: 100px 0 !important;
+}
