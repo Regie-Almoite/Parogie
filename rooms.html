@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./css/room.min.css" />
+
+        <script
+            src="https://kit.fontawesome.com/a15ff02c89.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="box-left"></div>
+        <div class="booking-container">
+            <div class="image-container">
+                <img src="./images/resortImg.jpg" alt="" />
+            </div>
+            <div class="inputs-container">
+                <div class="arrival-container">
+                    <h2>Arrival</h2>
+                    <form action="#">
+                        <div class="arrivalMonth-container">
+                            <p id="arrivalMonth">January</p>
+                            <select
+                                name="arrivalSelectMonth"
+                                id="arrivalSelectMonth"
+                            ></select>
+                        </div>
+                        <div class="arrivalDay-container">
+                            <p id="arrivalDay">1</p>
+                            <select
+                                name="arrivalSelectDay"
+                                id="arrivalSelectDay"
+                            ></select>
+                        </div>
+                    </form>
+                </div>
+                <div class="departure-container">
+                    <h2>Departure</h2>
+                    <form action="#">
+                        <div class="departureMonth-container">
+                            <p id="departureMonth">January</p>
+                            <select
+                                name="departureSelectMonth"
+                                id="departureSelectMonth"
+                            ></select>
+                        </div>
+                        <div class="departureDay-container">
+                            <p id="departureDay">1</p>
+                            <select
+                                name="departureSelectDay"
+                                id="departureSelectDay"
+                            ></select>
+                        </div>
+                    </form>
+                </div>
+                <div class="guest-container">
+                    <h2>Guest</h2>
+                    <form action="#">
+                        <div class="guestCount-container">
+                            <p id="guest">1</p>
+                            <select name="guestCount" id="guestCount">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="roomList-container">
+            <div class="roomListTitle-container">
+                <h2 class="roomList-title">Book a Room</h2>
+            </div>
+            <div class="rooms-container" id="roomList"></div>
+            <!-- <div
+                    <h3>Room Name</h3>
+                    <p>Capacity <span>4</span></p>
+                    <div>
+                        <p>Amenities</p>
+                        <ul>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                            <li>
+                                <span>Wireless Internet</span>
+                                icon
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="bookNowBtn">Book Now</button>
+                </div> -->
+        </div>
+
+        <!-- Script -->
+        <script type="module" src="./js/roomsMain.js"></script>
+    </body>
+</html>

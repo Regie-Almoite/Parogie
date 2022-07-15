@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <!-- <meta name="description" content="" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script
+            src="https://kit.fontawesome.com/a15ff02c89.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <link rel="stylesheet" href="./css/room.min.css" />
+    </head>
+    <body>
+        <div class="roomDisplay-container">
+            <div class="box-left"></div>
+            <div class="booking-container">
+                <div class="image-container">
+                    <img src="./images/resortImg.jpg" alt="" />
+                </div>
+                <div class="inputs-container">
+                    <div class="arrival-container">
+                        <h2>Arrival</h2>
+                        <form action="#">
+                            <div class="arrivalMonth-container">
+                                <p id="arrivalMonth">January</p>
+                                <select
+                                    name="arrivalSelectMonth"
+                                    id="arrivalSelectMonth"
+                                ></select>
+                            </div>
+                            <div class="arrivalDay-container">
+                                <p id="arrivalDay">1</p>
+                                <select
+                                    name="arrivalSelectDay"
+                                    id="arrivalSelectDay"
+                                ></select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="departure-container">
+                        <h2>Departure</h2>
+                        <form action="#">
+                            <div class="departureMonth-container">
+                                <p id="departureMonth">January</p>
+                                <select
+                                    name="departureSelectMonth"
+                                    id="departureSelectMonth"
+                                ></select>
+                            </div>
+                            <div class="departureDay-container">
+                                <p id="departureDay">1</p>
+                                <select
+                                    name="departureSelectDay"
+                                    id="departureSelectDay"
+                                ></select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="guest-container">
+                        <h2>Guest</h2>
+                        <form action="#">
+                            <div class="guestCount-container">
+                                <p id="guest">1</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="book-container">
+                        <a href="#" id="bookButton">Book</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bookDetails-container">
+                <div class="roomDisplayTitle">
+                    <h2 id="roomTitle">Room1</h2>
+                </div>
+                <div class="roomDisplayAmenities">
+                    <h3>Room Amenities</h3>
+                    <ul class="amenities">
+                        <li>
+                            <i class="fa-solid fa-person"></i>
+                            <span id="guestCapacity"></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bed"></i>
+                            <span id="beds"></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span id="telephone"></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-fan"></i>
+                            <span id="airConditioned"></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-wifi"></i>
+                            <span id="wirelessInternet"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="roomDisplayOverview">
+                    <h3>Room Overview</h3>
+                    <p id="overview"></p>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./js/roomDisplayMain.js"></script>
+    </body>
+</html>
