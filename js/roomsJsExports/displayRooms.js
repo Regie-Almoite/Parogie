@@ -21,7 +21,7 @@ function displayRooms(rooms) {
                             </ul>
                         </div>
                         <div class="bookNowBtn-container">
-                        <a class="bookNowBtn" href="./roomDisplay.html" id="${x}">Book Now</a>
+                        <a class="bookNowBtn" href="./roomDisplay.html" id="${rooms[x].roomID}">Book Now</a>
                         </div>
                     </div>
                 `;

@@ -1,4 +1,5 @@
 import { displayRooms } from "./displayRooms.js";
+import { bookNow } from "./bookNow.js";
 
 function displayGuestCount(rooms) {
     let countDisplay = document.getElementById("guest");
@@ -34,13 +35,17 @@ function displayGuestCount(rooms) {
                                 </ul>
                             </div>
                             <div class="bookNowBtn-container">
-                            <a class="bookNowBtn" href="./roomDisplay.html" id="${x}">Book Now</a>
+                                <a class="bookNowBtn" href="./roomDisplay.html" id="${filteredRooms[x].roomId}">Book Now</a>
                             </div>
                         </div>
                     `;
 
             roomListDisplay.appendChild(room);
         }
+
+        bookNow(rooms);
+
+        // bookNow(filteredRooms);
         // for (let x in filteredRooms) {
         //     filteredRoomsDisplay += `
         //         <div class="room-container" id="${x}">
