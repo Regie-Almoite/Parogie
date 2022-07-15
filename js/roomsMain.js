@@ -21,12 +21,6 @@ let monthList = [
     "December",
 ];
 
-displayArrivalMonths(monthList);
-displayArrivalDates(monthList);
-displayDepartureMonths(monthList);
-displayDepartureDates(monthList);
-displayGuestCount();
-
 let roomList = [
     {
         image: "./images/roomImg.jpg",
@@ -149,6 +143,12 @@ let roomList = [
         ],
     },
 ];
+
+displayArrivalMonths(monthList);
+displayArrivalDates(monthList);
+displayDepartureMonths(monthList);
+displayDepartureDates(monthList);
+displayGuestCount(roomList);
 
 displayRooms(roomList);
 bookNow(roomList);

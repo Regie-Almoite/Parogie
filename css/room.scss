@@ -27,29 +27,30 @@
 }
 
 body {
+    position: relative;
     font-family: var(--font-montserrat);
 }
 
+.box-left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to right top,
+        #c99632,
+        #ca9d47,
+        #caa45a,
+        #cbab6d,
+        #cbb280
+    );
+    // background-color: var(--color-brown);
+    z-index: -1;
+    clip-path: polygon(0 0, 38% 0, 63% 100%, 0% 100%);
+}
 .roomDisplay-container {
     position: relative;
     width: 100%;
     height: 100%;
-    .box-left {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(
-            to right top,
-            #c99632,
-            #ca9d47,
-            #caa45a,
-            #cbab6d,
-            #cbb280
-        );
-        // background-color: var(--color-brown);
-        z-index: -1;
-        clip-path: polygon(0 0, 38% 0, 63% 100%, 0% 100%);
-    }
 }
 
 /* Guest Booking Form */
