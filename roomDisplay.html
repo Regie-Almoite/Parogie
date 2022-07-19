@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="./css/room.min.css" />
     </head>
     <body>
+        <div id="errorMessages">
+            <p class="error">
+                This is an error message <i class="fa-solid fa-xmark"></i>
+            </p>
+        </div>
         <div class="roomDisplay-container">
             <div class="box-left"></div>
             <div class="booking-container">
@@ -60,7 +65,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="guest-container">
+                    <div class="guest-container" id="guest-disabled">
                         <h2>Guest</h2>
                         <form action="#">
                             <div class="guestCount-container">
