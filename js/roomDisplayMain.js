@@ -60,13 +60,60 @@ overviewDisplay.textContent = bookingData.roomDetails.roomDescription;
 
 let bookBtn = document.getElementById("bookButton");
 
-bookBtn.addEventListener("click", () => {
-    bookingData.aDay = arrivalDayDisplay.innerHTML;
-    bookingData.aMonth = arrivalMonthDisplay.innerHTML;
-    bookingData.dMonth = departureMonthDisplay.innerHTML;
-    bookingData.dDay = departureDayDisplay.innerHTML;
+bookBtn.addEventListener("click", (event) => {
+    let errors = localStorage.getItem("error");
+    let aMonth = document.getElementById("arrivalMonth");
+    let aDay = document.getElementById("arrivalDay");
+    let dMonth = document.getElementById("departureMonth");
+    let dDay = document.getElementById("departureDay");
+    if (errors != "") {
+        event.preventDefault();
+        document.querySelector(
+            "#errorMessages .error"
+        ).innerHTML = `${errors} <i class="fa-solid fa-xmark"></i>`;
+        document.getElementById("errorMessages").style.transform =
+            "translate(-50%, 0)";
+        setTimeout(() => {
+            document.getElementById("errorMessages").style.transform =
+                "translate(-50%, -150%)";
+        }, 5000);
+    } else if (
+        aMonth.textContent == dMonth.textContent &&
+        aDay.textContent == dDay.textContent
+    ) {
+        console.log("here 2.2");
+        event.preventDefault();
+        document.querySelector("#errorMessages .error").innerHTML = `
+                   The departure day must be ahead of the arrival day <i class="fa-solid fa-xmark"></i>
+                `;
+        document.getElementById("errorMessages").style.transform =
+            "translate(-50%, 0)";
+        setTimeout(() => {
+            document.getElementById("errorMessages").style.transform =
+                "translate(-50%, -150%)";
+        }, 5000);
+    } else {
+        bookingData.aDay = arrivalDayDisplay.innerHTML;
+        bookingData.aMonth = arrivalMonthDisp.innerHTML;
+        bookingData.dMonth = departureMonthDisplay.innerHTML;
+        bookingData.dDay = departureDayDisplay.innerHTML;
 
-    localStorage.setItem("bookData", JSON.stringify(bookingData));
+        let arrMonth = bookingData.aMonth;
+        let arrDay = bookingData.aDay;
+        let depMonth = bookingData.dMonth;
+        let depDay = bookingData.dDay;
+        let year = new Date().getFullYear();
+        let arrivalDate = new Date(`${arrMonth}/${arrDay}/${year}`);
+        let departureDate = new Date(`${depMonth}/${depDay}/${year}`);
 
-    console.log(bookingData);
+        let difference = departureDate.getTime() - arrivalDate.getTime();
+        let daysOfStay = Math.ceil(difference / (1000 * 3600 * 24));
+
+        bookingData.numberOfStay = daysOfStay;
+        bookingData.totalAmoutDue = daysOfStay * bookingData.price;
+
+        console.log(bookingData);
+
+        localStorage.setItem("bookData", JSON.stringify(bookingData));
+    }
 });

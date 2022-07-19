@@ -20,6 +20,7 @@ function displayGuestCount(rooms) {
             room.id = x;
             room.innerHTML = `
                         <div class="image-container">
+                            <p class="price">${filteredRooms[x].price}</p>
                             <img src="${filteredRooms[x].image}"
                         </div>
                         <div class="room-body">
