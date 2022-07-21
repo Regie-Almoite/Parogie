@@ -8,7 +8,7 @@ function dayValidation() {
         console.log("here");
         let errorDisplay = document.getElementById("errorMessages");
         let errorMessage = "The arrival day must be behind the departure day";
-        errorDisplay.innerHTML = `<p class="error">${errorMessage}</p>`;
+        errorDisplay.innerHTML = `<p class="error">${errorMessage} <i class="fa-solid fa-xmark"></p>`;
 
         errorDisplay.style.transform = "translate(-50%, 0)";
         setTimeout(() => {
