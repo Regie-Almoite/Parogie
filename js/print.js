@@ -30,7 +30,7 @@ let maskedCard = last4Digits.padStart(fullCardNum.length, "*");
 card.innerText = maskedCard;
 
 let totalAmount1 = document.getElementById("totalAmountDisplay");
-totalAmount1.innerText = `$${bookData.totalAmountDue}`;
+totalAmount1.innerText = `₱${bookData.totalAmountDue}`;
 
 let roomName = document.getElementById("roomNameDisplay");
 roomName.innerText = `${bookData.roomDetails.roomName}`;
@@ -42,4 +42,4 @@ arrivalDate.innerText = `(${bookData.arrivalMonth} ${
 let guestCount = document.getElementById("guestCountDisplay");
 guestCount.innerText = `${bookData.guest}`;
 let totalAmount2 = document.getElementById("totalAmountDisplay2");
-totalAmount2.innerText = `$${bookData.totalAmountDue}`;
+totalAmount2.innerText = `₱${bookData.totalAmountDue}`;

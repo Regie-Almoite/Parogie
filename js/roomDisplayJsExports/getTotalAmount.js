@@ -27,7 +27,7 @@ function getTotalAmount() {
         totalAmountDisplay.innerText = "";
     } else {
         daysOfStayDisplay.innerText = daysOfStay;
-        totalAmountDisplay.innerText = totalAmountDue;
+        totalAmountDisplay.innerText = `₱${totalAmountDue}`;
         bookData.totalAmountDue = totalAmountDue;
         localStorage.setItem("bookData", JSON.stringify(bookData));
     }
