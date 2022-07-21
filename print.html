@@ -1,0 +1,566 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Forms Payment</title>
+
+        <link rel="stylesheet" href="robin.css" />
+        <link rel="stylesheet" href="./css/navbarbootstrap.css" />
+        <link rel="stylesheet" href="./css/footeronly.css" />
+
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <!------- Navigation Bar *Web Size*------------->
+        <nav
+            class="navbar navbar-expand-lg navbar-light"
+            style="background-color: #132642"
+        >
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./rooms.html">Rooms</a>
+                    </li>
+                    <li class="centered-logo nav-item">
+                        <a href="#">
+                            <div class="logo">
+                                <img
+                                    src="./images/parogielogo2.png"
+                                    id="nav-logo"
+                                />
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./servicepage.html"
+                            >Services</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactpage.html"
+                            >Contact</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link my-4"
+                            href="./rooms.html"
+                            id="booknow"
+                            >BOOK NOW</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- navigation bar ends -->
+        <section id="print">
+            <div class="container">
+                <div class="row d-flex flex-column flex-md-row">
+                    <div class="col pt-4">
+                        <div><h3>Guest Information</h3></div>
+                        <div><hr /></div>
+                        <div class="row">
+                            <!-- first col -->
+                            <div class="col">
+                                <div>
+                                    <h5 class="mytext fw-normal">Name</h5>
+                                    <p class="mytext" id="nameDisplay"></p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-normal">Phone</h5>
+                                    <p class="mytext" id="phoneDisplay"></p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-normal">City</h5>
+                                    <p class="mytext" id="cityDisplay"></p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-normal">
+                                        Company name
+                                    </h5>
+                                    <p class="mytext" id="companyDisplay"></p>
+                                </div>
+                            </div>
+                            <!-- column inside first col -->
+                            <div class="col">
+                                <div>
+                                    <h5 class="mytext fw-normal">Email</h5>
+                                    <p class="mytext" id="emailDisplay"></p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-normal">Zip</h5>
+                                    <p class="mytext" id="zipDisplay"></p>
+                                </div>
+                                <!-- <div>
+                                    <h5 class="mytext fw-normal">Address</h5>
+                                    <p class="mytext" id="addressDisplay"></p>
+                                </div> -->
+                                <!-- <div>
+                  <h5 class="mytext fw-normal">Company phone</h5>
+                  <p class="mytext">+111-222-333-444</p>
+                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second col -->
+                    <div class="col pt-4">
+                        <div>
+                            <h3>Reservation Details</h3>
+                        </div>
+                        <div>
+                            <hr />
+                        </div>
+                        <!-- column inside second col -->
+                        <div class="row">
+                            <div class="col">
+                                <div>
+                                    <h5 class="mytext fw-normal">Order no.</h5>
+                                    <p class="mytext">00000001</p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-normal">Order date</h5>
+                                    <p class="mytext">07/16/2022</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h5 class="mytext fw-normal">
+                                        transaction ID
+                                    </h5>
+                                    <p class="mytext">00000001</p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-noral">
+                                        Shipping arrival
+                                    </h5>
+                                    <p class="mytext">07/17/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <h3>Payment details</h3>
+                        </div>
+                        <div>
+                            <hr />
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div>
+                                    <h5 class="mytext fw-normal">
+                                        Transaction time
+                                    </h5>
+                                    <p
+                                        class="mytext"
+                                        id="transactionTimeDisplay"
+                                    >
+                                        07/16/2022 at 00:59
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-normal">
+                                        Card details
+                                    </h5>
+                                    <p class="mytext" id="cardDisplay">
+                                        *** *** *** 5446
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h5 class="mytext fw-normal">Amount</h5>
+                                    <p class="mytext" id="totalAmountDisplay">
+                                        $1259.00
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5 class="mytext fw-normal">
+                                        Reservation Type
+                                    </h5>
+                                    <p class="mytext">Luxy room</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section>
+            <div class="container pt-5">
+                <div class="row d-flex flex-column flex-md-row">
+                    <div class="col">
+                        <h5 class="mytext py-2">Room Type</h5>
+
+                        <img src="./images/luxuryroom.jpg" class="img-fluid" />
+                    </div>
+                    <div class="col d-flex flex-column">
+                        <h5 class="text-end mytext py-2">PRICE</h5>
+
+                        <div class="pt-5">
+                            <h1 class="text-gold" id="roomNameDisplay">
+                                Luxury Room
+                            </h1>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="pt-3">
+                                        <h5 class="mytext fw-normal">
+                                            Arrival date
+                                            <span
+                                                class="mytext"
+                                                id="arrivalDateDisplay"
+                                                >(July 17,2022)</span
+                                            >
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <h5 class="mytext fw-normal">
+                                            Guest
+                                            <span
+                                                class="mytext"
+                                                id="guestCountDisplay"
+                                                >2 Adults, 1 Child</span
+                                            >
+                                        </h5>
+                                    </div>
+                                    <!-- <div>
+                                        <h5 class="mytext fw-normal">
+                                            Nights <span class="mytext">7</span>
+                                        </h5>
+                                    </div> -->
+                                </div>
+                                <div class="col">
+                                    <div class="text-end">
+                                        <h3
+                                            class="mytext"
+                                            id="totalAmountDisplay2"
+                                        >
+                                            $1,998
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- <div class="row">
+                    <hr />
+                    <div class="col">
+                        <div>
+                            <h5 class="mytext fw-normal">Discount 15%</h5>
+                        </div>
+                    </div>
+                    <div class="col text-end">
+                        <h5 class="mytext">$159.00</h5>
+                    </div>
+                    <hr />
+                </div> -->
+                <!--  -->
+                <!-- <div class="row">
+                    <div class="col">
+                        <div><h5 class="mytext fw-normal">TAX</h5></div>
+                    </div>
+                    <div class="col text-end">
+                        <h5 class="mytext">$59.00</h5>
+                    </div>
+                    <hr />
+                </div> -->
+                <!--  -->
+                <!-- <div class="row">
+                    <div class="col">
+                        <div><h5 class="mytext">Promo code included!</h5></div>
+                    </div>
+                    <div class="col text-end">
+                        <h3 class="mytext fw-normal">$1259.00</h3>
+                    </div>
+                    <hr />
+                </div> -->
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <button class="backBtn">
+                                <a href="./reservationsList.html"
+                                    >Go to my reservations</a
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col text-end">
+                        <button class="printBtn">
+                            PRINT <i class="fa-solid fa-print"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer start -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify">
+                            The Parôgiè Boutique Hotel<br />
+                            Champ de Mars, 5 Av. Anatole France, 75007 Paris,
+                            France<br />
+                            + 33 1 40 51 60 80<br />
+                            contact@parogieboutiquehotel.com
+                        </p>
+                        <span
+                            ><a
+                                class="link"
+                                href="https://www.forbes.com/sites/lealane/2022/01/19/annual-travelers-choice-awards-for-2022-best-of-the-best/?sh=1663c6f5204c"
+                                ><img
+                                    class="social-icons2 img-fluid"
+                                    src="./images/imagefolder/TripAdvisorLogo.jpeg"
+                                    alt="tripadvisoricon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="#"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/100percentlogor.png"
+                                    alt="100percenticon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="#"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/award1.png"
+                                    alt="award1icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://en.escapio.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/award2.png"
+                                    alt="award2icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/award3.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/luxuryawards.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/champion.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/book.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="#">New Normal</a></li>
+                            <li><a href="#">Press Release</a></li>
+                            <li><a href="#">Media Mileage</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="./contactpage.html">Contact Us</a></li>
+                        </ul>
+
+                        <span class="my-2"
+                            ><h3 class="my-1">DOWNLOAD OUR APP</h3></span
+                        >
+                        <span
+                            ><p>
+                                We now make your stay at our hotel even more
+                                personalized. With our new concierge app it's
+                                like your personal butler is with you always
+                                available 24 hours a day!
+                            </p></span
+                        >
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons4 img-fluid"
+                                    src="./images/imagefolder/google-play-badge.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons4 img-fluid"
+                                    src="./images/imagefolder/appstore-badge.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Best Online Rate Guarantee</a></li>
+                            <li><a href="#">COVID-19 update</a></li>
+                            <li><a href="#">Health & Safety</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Gift cards</a></li>
+                        </ul>
+
+                        <span class="my-2"
+                            ><h3 class="my-1">CARDS ACCEPTED</h3></span
+                        >
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/visa.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/maestro.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/jcb.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/american-express.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/paypal.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/bitcoin.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/googlep.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/mastercard.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/apple-pay.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                            Copyright &copy; 2022 All Rights Reserved by
+                            <a href="#">PARÔGIE BOUTIQUE HOTEL</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li>
+                                <a
+                                    class="facebook"
+                                    href="https://www.facebook.com/Green-Recipe-Food-Blog-113738341343018"
+                                    ><i class="fab fa-facebook"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    class="twitter"
+                                    href="https://twitter.com/PaowiiC"
+                                    ><i class="fab fa-twitter"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    class="instagram"
+                                    href="https://www.instagram.com/greenrecipeblog/"
+                                    ><i class="fab fa-instagram"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    class="linkedin"
+                                    href="https://www.linkedin.com/in/paula-manese-b32a64197/"
+                                    ><i class="fab fa-linkedin"></i
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+        <script src="./js/form.js"></script>
+        <script src="./js/print.js"></script>
+        <script
+            src="https://kit.fontawesome.com/3bdf664df4.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -1,3 +1,4 @@
+// A function that renders all rooms listed
 function displayRooms(rooms) {
     console.log(rooms);
     let roomListDisplay = document.getElementById("roomList");
@@ -7,7 +8,7 @@ function displayRooms(rooms) {
         room.id = x;
         room.innerHTML = `
                     <div class="image-container">
-                        <p class="price">${rooms[x].price}</p>
+                        <p class="price"><i class="fa-solid fa-peso-sign"></i>${rooms[x].price} <span class="grey">/ day<span></p>
                         <img src="${rooms[x].image}"
                     </div>
                     <div class="room-body">

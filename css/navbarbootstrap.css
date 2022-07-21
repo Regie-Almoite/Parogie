@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Montserrat:wght@200;500&family=Pinyon+Script&family=Playfair+Display:wght@500&display=swap");
+
+/************************************ Body *******************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+}
+
+/************************************ Navigation Bar Bootstrap **************************/
+
+#nav-logo {
+    width: 130px;
+    margin: 20px;
+}
+
+#navbarNavAltMarkup .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+@media only screen and (min-width: 1200px) {
+    #navbarNavAltMarkup .navbar .nav-item {
+        padding: 0.5em 1em;
+    }
+
+    #navbarNavAltMarkup .navbar .navbar-nav {
+        margin-top: 0.5em 1em;
+    }
+}
+#navbarNavAltMarkup #booknow {
+    border: 2px solid black;
+    background-color: #ffffff;
+    color: black;
+    padding: 0.3em 3em;
+    margin: 0.05em;
+    font-size: 20px;
+    text-decoration: solid;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
+}
+
+#navbarNavAltMarkup #booknow:hover {
+    color: #ffffff;
+    border-radius: 10px;
+    border-color: #ffffff;
+    background: linear-gradient(145deg, #ff6a6a, #e45959);
+    box-shadow: 18px 18px 41px #6d2b2b, -18px -18px 41px #ff9b9b;
+}
+
+/************************************ Underline Hover **************************/
+
+#navbarNavAltMarkup .nav-link {
+    display: inline-block;
+    position: relative;
+    color: #ffff;
+}
+
+#navbarNavAltMarkup .nav-link:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+#navbarNavAltMarkup .nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
