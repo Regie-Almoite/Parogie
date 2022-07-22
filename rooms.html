@@ -3,112 +3,439 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title></title>
+        <title>Reservation</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="./css/room.min.css" />
 
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./images/favicon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./images/favicon.png"
+        />
+
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <!-- external css -->
+        <link rel="stylesheet" href="./css/navbarbootstrap.css" />
+        <link rel="stylesheet" href="./css/room.min.css" />
+        <link rel="stylesheet" href="./css/footeronly.css" />
+
+        <!-- fontawesome -->
         <script
             src="https://kit.fontawesome.com/a15ff02c89.js"
             crossorigin="anonymous"
         ></script>
+
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous"
+        />
     </head>
     <body>
-        <div class="box-left"></div>
-        <div class="booking-container">
-            <div class="image-container">
-                <img src="./images/resortImg.jpg" alt="" />
+        <!------- Navigation Bar *Web Size*------------->
+        <nav
+            class="navbar navbar-expand-lg navbar-light"
+            style="background-color: #132642"
+        >
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./rooms.html">Rooms</a>
+                    </li>
+                    <li class="centered-logo nav-item">
+                        <a href="./index.html">
+                            <div class="logo">
+                                <img
+                                    src="./images/parogielogo2.png"
+                                    id="nav-logo"
+                                />
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./servicepage.html"
+                            >Services</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactpage.html"
+                            >Contact</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link my-4"
+                            href="./rooms.html"
+                            id="booknow"
+                            >BOOK NOW</a
+                        >
+                    </li>
+                </ul>
             </div>
-            <div class="inputs-container">
-                <div class="arrival-container">
-                    <h2>Arrival</h2>
-                    <form action="#">
-                        <div class="arrivalMonth-container">
-                            <p id="arrivalMonth">January</p>
-                            <select
-                                name="arrivalSelectMonth"
-                                id="arrivalSelectMonth"
-                            ></select>
-                        </div>
-                        <div class="arrivalDay-container">
-                            <p id="arrivalDay">1</p>
-                            <select
-                                name="arrivalSelectDay"
-                                id="arrivalSelectDay"
-                            ></select>
-                        </div>
-                    </form>
-                </div>
-                <div class="departure-container">
-                    <h2>Departure</h2>
-                    <form action="#">
-                        <div class="departureMonth-container">
-                            <p id="departureMonth">January</p>
-                            <select
-                                name="departureSelectMonth"
-                                id="departureSelectMonth"
-                            ></select>
-                        </div>
-                        <div class="departureDay-container">
-                            <p id="departureDay">1</p>
-                            <select
-                                name="departureSelectDay"
-                                id="departureSelectDay"
-                            ></select>
-                        </div>
-                    </form>
-                </div>
-                <div class="guest-container">
-                    <h2>Guest</h2>
-                    <form action="#">
-                        <div class="guestCount-container">
-                            <p id="guest">1</p>
-                            <select name="guestCount" id="guestCount">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        </nav>
+        <!-- navigation bar ends -->
+
+        <!-- error message start -->
+        <div id="errorMessages">
+            <p class="error">
+                This is an error message <i class="fa-solid fa-xmark"></i>
+            </p>
         </div>
-        <div class="roomList-container">
-            <div class="roomListTitle-container">
-                <h2 class="roomList-title">Book a Room</h2>
+        <!-- error message end -->
+
+        <!-- main content start -->
+        <div class="main-content">
+            <div class="box-left"></div>
+            <!-- guest booking input start -->
+            <div class="booking-container">
+                <div class="image-container">
+                    <img src="./images/resortImg.jpg" alt="" />
+                </div>
+                <div class="inputs-container">
+                    <div class="arrival-container">
+                        <h2>Arrival</h2>
+                        <form action="#">
+                            <div class="arrivalMonth-container">
+                                <p id="arrivalMonth">January</p>
+                                <select
+                                    name="arrivalSelectMonth"
+                                    id="arrivalSelectMonth"
+                                ></select>
+                            </div>
+                            <div class="arrivalDay-container">
+                                <p id="arrivalDay">1</p>
+                                <select
+                                    name="arrivalSelectDay"
+                                    id="arrivalSelectDay"
+                                ></select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="departure-container">
+                        <h2>Departure</h2>
+                        <form action="#">
+                            <div class="departureMonth-container">
+                                <p id="departureMonth">January</p>
+                                <select
+                                    name="departureSelectMonth"
+                                    id="departureSelectMonth"
+                                ></select>
+                            </div>
+                            <div class="departureDay-container">
+                                <p id="departureDay">2</p>
+                                <select
+                                    name="departureSelectDay"
+                                    id="departureSelectDay"
+                                ></select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="guest-container">
+                        <h2>Guest</h2>
+                        <form action="#">
+                            <div class="guestCount-container">
+                                <p id="guest">1</p>
+                                <select name="guestCount" id="guestCount">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="rooms-container" id="roomList"></div>
-            <!-- <div
-                    <h3>Room Name</h3>
-                    <p>Capacity <span>4</span></p>
-                    <div>
-                        <p>Amenities</p>
-                        <ul>
+            <!-- guest booking input end -->
+            <!-- room list start -->
+            <div class="roomList-container">
+                <div class="roomListTitle-container">
+                    <h2 class="roomList-title">Book a Room</h2>
+                </div>
+                <div class="rooms-container" id="roomList"></div>
+            </div>
+            <!-- room list end -->
+        </div>
+        <!-- main content end -->
+        <!-- footer start -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h3>About</h3>
+                        <p class="text-justify">
+                            The Parôgiè Boutique Hotel<br />
+                            Champ de Mars, 5 Av. Anatole France, 75007 Paris,
+                            France<br />
+                            + 33 1 40 51 60 80<br />
+                            contact@parogieboutiquehotel.com
+                        </p>
+                        <span
+                            ><a
+                                class="link"
+                                href="https://www.forbes.com/sites/lealane/2022/01/19/annual-travelers-choice-awards-for-2022-best-of-the-best/?sh=1663c6f5204c"
+                                ><img
+                                    class="social-icons2 img-fluid"
+                                    src="./images/imagefolder/TripAdvisorLogo.jpeg"
+                                    alt="tripadvisoricon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="#"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/100percentlogor.png"
+                                    alt="100percenticon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="#"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/award1.png"
+                                    alt="award1icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://en.escapio.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/award2.png"
+                                    alt="award2icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/award3.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/luxuryawards.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/champion.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons3 img-fluid"
+                                    src="./images/imagefolder/book.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h3>Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="#">New Normal</a></li>
+                            <li><a href="#">Press Release</a></li>
+                            <li><a href="#">Media Mileage</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="./contactpage.html">Contact Us</a></li>
+                        </ul>
+
+                        <span class="my-2"
+                            ><h3 class="my-1">DOWNLOAD OUR APP</h3></span
+                        >
+                        <span
+                            ><p>
+                                We now make your stay at our hotel even more
+                                personalized. With our new concierge app it's
+                                like your personal butler is with you always
+                                available 24 hours a day!
+                            </p></span
+                        >
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons4 img-fluid"
+                                    src="./images/imagefolder/google-play-badge.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons4 img-fluid"
+                                    src="./images/imagefolder/appstore-badge.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Best Online Rate Guarantee</a></li>
+                            <li><a href="#">COVID-19 update</a></li>
+                            <li><a href="#">Health & Safety</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Gift cards</a></li>
+                        </ul>
+
+                        <span class="my-2"
+                            ><h3 class="my-1">CARDS ACCEPTED</h3></span
+                        >
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/visa.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/maestro.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/jcb.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/american-express.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/paypal.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/bitcoin.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/googlep.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/mastercard.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                        <span
+                            ><a class="link" href="https://hautegrandeur.com/"
+                                ><img
+                                    class="social-icons5 img-fluid"
+                                    src="./images/imagefolder/apple-pay.png"
+                                    alt="award3icon" /></a
+                        ></span>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                            Copyright &copy; 2022 All Rights Reserved by
+                            <a href="#">PARÔGIE BOUTIQUE HOTEL</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
                             <li>
-                                <span>Wireless Internet</span>
-                                icon
+                                <a
+                                    class="facebook"
+                                    href="https://www.facebook.com/Green-Recipe-Food-Blog-113738341343018"
+                                    ><i class="fab fa-facebook"></i
+                                ></a>
                             </li>
                             <li>
-                                <span>Wireless Internet</span>
-                                icon
+                                <a
+                                    class="twitter"
+                                    href="https://twitter.com/PaowiiC"
+                                    ><i class="fab fa-twitter"></i
+                                ></a>
                             </li>
                             <li>
-                                <span>Wireless Internet</span>
-                                icon
+                                <a
+                                    class="instagram"
+                                    href="https://www.instagram.com/greenrecipeblog/"
+                                    ><i class="fab fa-instagram"></i
+                                ></a>
                             </li>
                             <li>
-                                <span>Wireless Internet</span>
-                                icon
+                                <a
+                                    class="linkedin"
+                                    href="https://www.linkedin.com/in/paula-manese-b32a64197/"
+                                    ><i class="fab fa-linkedin"></i
+                                ></a>
                             </li>
                         </ul>
                     </div>
-                    <button class="bookNowBtn">Book Now</button>
-                </div> -->
-        </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
 
-        <!-- Script -->
+        <!-- bootstrap js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- external script -->
         <script type="module" src="./js/roomsMain.js"></script>
     </body>
 </html>
