@@ -1,3 +1,4 @@
+// A function that returns the days of a month
 function getDaysInMonth(month) {
     let currentMonth = Number(month) + 1;
     let currentYear = new Date().getFullYear(); // get the current year

@@ -1,7 +1,9 @@
 import { displayDepartureMonths } from "./roomsJsExports/displayDepartureMonths.js";
 import { displayArrivalMonths } from "./roomsJsExports/displayArrivalMonths.js";
-import { displayArrivalDates } from "./roomsJsExports/displayArrivalDates.js";
-import { displayDepartureDates } from "./roomsJsExports/displayDepartureDates.js";
+import { displayDepartureDays } from "./roomsJsExports/displayDepartureDays.js";
+import { displayArrivalDays } from "./roomsJsExports/displayArrivalDays.js";
+// import { displayArrivalDates } from "./roomsJsExports/displayArrivalDates.js";
+// import { displayDepartureDates } from "./roomsJsExports/displayDepartureDates.js";
 import { displayGuestCount } from "./roomsJsExports/displayGuestCount.js";
 import { displayRooms } from "./roomsJsExports/displayRooms.js";
 import { bookNow } from "./roomsJsExports/bookNow.js";
@@ -154,9 +156,9 @@ let roomList = [
 ];
 
 displayArrivalMonths(monthList);
-displayArrivalDates(monthList);
 displayDepartureMonths(monthList);
-displayDepartureDates(monthList);
+displayArrivalDays(monthList, "January");
+displayDepartureDays(monthList, "January");
 displayGuestCount(roomList);
 
 displayRooms(roomList);

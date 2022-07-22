@@ -1,7 +1,8 @@
-import { displayArrivalDates } from "./roomsJsExports/displayArrivalDates.js";
-import { displayArrivalMonths } from "./roomsJsExports/displayArrivalMonths.js";
-import { displayDepartureDates } from "./roomsJsExports/displayDepartureDates.js";
-import { displayDepartureMonths } from "./roomsJsExports/displayDepartureMonths.js";
+import { displayArrivalMonths } from "./roomDisplayJsExports/displayArrivalMonths.js";
+import { displayArrivalDays } from "./roomDisplayJsExports/displayArrivalDays.js";
+import { displayDepartureMonths } from "./roomDisplayJsExports/displayDepartureMonths.js";
+import { displayDepartureDays } from "./roomDisplayJsExports/displayDepartureDays.js";
+import { getTotalAmount } from "./roomDisplayJsExports/getTotalAmount.js";
 
 let monthList = [
     "January",
@@ -18,26 +19,29 @@ let monthList = [
     "December",
 ];
 
+//Guest input and the selected room details
 let bookingData = JSON.parse(localStorage.getItem("bookData"));
 
+console.log(bookingData);
+
+//Display the previous guest input to the roomDisplay page
 let arrivalMonthDisplay = document.getElementById("arrivalMonth");
 let arrivalDayDisplay = document.getElementById("arrivalDay");
 let departureMonthDisplay = document.getElementById("departureMonth");
 let departureDayDisplay = document.getElementById("departureDay");
 let guestDisplay = document.getElementById("guest");
 
-console.log(bookingData);
-
-arrivalMonthDisplay.textContent = bookingData.aMonth;
-arrivalDayDisplay.textContent = bookingData.aDay;
-departureMonthDisplay.textContent = bookingData.dMonth;
-departureDayDisplay.textContent = bookingData.dDay;
+arrivalMonthDisplay.textContent = bookingData.arrivalMonth;
+arrivalDayDisplay.textContent = bookingData.arrivalDay;
+departureMonthDisplay.textContent = bookingData.departureMonth;
+departureDayDisplay.textContent = bookingData.departureDay;
 guestDisplay.textContent = bookingData.guest;
 
-displayArrivalDates(monthList);
+getTotalAmount(bookingData);
 displayArrivalMonths(monthList);
+displayArrivalDays(monthList, bookingData.arrivalMonth);
 displayDepartureMonths(monthList);
-displayDepartureDates(monthList);
+displayDepartureDays(monthList, bookingData.departureMonth);
 
 let roomTitleDisplay = document.getElementById("roomTitle");
 roomTitleDisplay.textContent = bookingData.roomDetails.roomName;
@@ -60,32 +64,20 @@ overviewDisplay.textContent = bookingData.roomDetails.roomDescription;
 
 let bookBtn = document.getElementById("bookButton");
 
+//When Book button is clicked the user will redirect to the payment page
 bookBtn.addEventListener("click", (event) => {
-    let errors = localStorage.getItem("error");
+    let error = localStorage.getItem("error");
+    let bookingData = JSON.parse(localStorage.getItem("bookData"));
     let aMonth = document.getElementById("arrivalMonth");
     let aDay = document.getElementById("arrivalDay");
     let dMonth = document.getElementById("departureMonth");
     let dDay = document.getElementById("departureDay");
-    if (errors != "") {
+
+    if (error != "") {
         event.preventDefault();
         document.querySelector(
             "#errorMessages .error"
-        ).innerHTML = `${errors} <i class="fa-solid fa-xmark"></i>`;
-        document.getElementById("errorMessages").style.transform =
-            "translate(-50%, 0)";
-        setTimeout(() => {
-            document.getElementById("errorMessages").style.transform =
-                "translate(-50%, -150%)";
-        }, 5000);
-    } else if (
-        aMonth.textContent == dMonth.textContent &&
-        aDay.textContent == dDay.textContent
-    ) {
-        console.log("here 2.2");
-        event.preventDefault();
-        document.querySelector("#errorMessages .error").innerHTML = `
-                   The departure day must be ahead of the arrival day <i class="fa-solid fa-xmark"></i>
-                `;
+        ).innerHTML = `${error} <i class="fa-solid fa-xmark"></i>`;
         document.getElementById("errorMessages").style.transform =
             "translate(-50%, 0)";
         setTimeout(() => {
@@ -93,26 +85,11 @@ bookBtn.addEventListener("click", (event) => {
                 "translate(-50%, -150%)";
         }, 5000);
     } else {
-        bookingData.aDay = arrivalDayDisplay.innerHTML;
-        bookingData.aMonth = arrivalMonthDisp.innerHTML;
-        bookingData.dMonth = departureMonthDisplay.innerHTML;
-        bookingData.dDay = departureDayDisplay.innerHTML;
-
-        let arrMonth = bookingData.aMonth;
-        let arrDay = bookingData.aDay;
-        let depMonth = bookingData.dMonth;
-        let depDay = bookingData.dDay;
-        let year = new Date().getFullYear();
-        let arrivalDate = new Date(`${arrMonth}/${arrDay}/${year}`);
-        let departureDate = new Date(`${depMonth}/${depDay}/${year}`);
-
-        let difference = departureDate.getTime() - arrivalDate.getTime();
-        let daysOfStay = Math.ceil(difference / (1000 * 3600 * 24));
-
-        bookingData.numberOfStay = daysOfStay;
-        bookingData.totalAmoutDue = daysOfStay * bookingData.price;
-
-        console.log(bookingData);
+        bookingData.arrivalDay = aDay.textContent;
+        bookingData.arrivalMonth = aMonth.textContent;
+        bookingData.departureMonth = dMonth.textContent;
+        bookingData.departureDay = dDay.textContent;
+        bookingData.totalAmountDue = getTotalAmount();
 
         localStorage.setItem("bookData", JSON.stringify(bookingData));
     }

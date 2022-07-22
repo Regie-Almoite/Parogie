@@ -1,0 +1,845 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Montserrat:wght@200;500&family=Pinyon+Script&family=Playfair+Display:wght@500&display=swap");
+
+/************************************ Body *******************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair-display", sans-serif;
+}
+
+/************************************ Normal Nav **************************************/
+#nav {
+    background-color: #132642;
+}
+
+.topnav,
+.nav-link {
+    list-style: none;
+    text-decoration: none;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: white;
+    font-family: "Playfair-display", sans-serif;
+    font-size: 2.5vmin;
+    text-transform: uppercase;
+}
+
+.topnav a:hover {
+    color: rgb(218, 211, 203);
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Change applies to li but not to the logo */
+.topnav li:not(.centered-logo) {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Change the size of the img */
+.logo img {
+    width: 100px;
+}
+
+.centered-logo {
+    margin-left: auto;
+}
+
+#booknow {
+    border: 2px solid black;
+    background-color: #ffffff;
+    color: black;
+    padding: 8px 10px;
+    font-size: 21px;
+    text-decoration: solid;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
+}
+
+#booknow:hover {
+    color: #ffffff;
+    border-radius: 10px;
+    border-color: #ffffff;
+    background: linear-gradient(145deg, #ff6a6a, #e45959);
+    box-shadow: 18px 18px 41px #6d2b2b, -18px -18px 41px #ff9b9b;
+}
+
+/************************************ Dropdown Menu **************************************/
+
+.icon-container {
+    /*Contain the menu icon */
+    position: absolute;
+    right: 0px;
+    top: -60px;
+    z-index: 100;
+    width: 100px;
+    height: 200px;
+    background: transparent;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+}
+
+label .hamburger {
+    /* Second line of the icon */
+    position: absolute;
+    top: 135px;
+    left: 40px;
+    width: 30px;
+    height: 2px;
+    background: black;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+/* First and Third line of the icon */
+label .hamburger:after,
+label .hamburger:before {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+label .hamburger:before {
+    top: -10px;
+}
+
+label .hamburger:after {
+    bottom: -10px;
+}
+
+label input {
+    display: none;
+} /* the toggle box, when it is clicked, menu will be displayed */
+
+label input:checked + .icon-container {
+    /*Spread out the white background */
+    box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff; /* Bring out the full-size white background when the icon is clicked  */
+    border-radius: 0;
+    background: white !important;
+}
+
+/* Animation of the icon */
+label input:checked + .icon-container .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: black;
+}
+
+label input:checked + .icon-container .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+    background: black;
+}
+
+label input:checked + .icon-container .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+    background: black;
+}
+
+/* Display the menu when click */
+label input:checked + .icon-container + ul {
+    opacity: 1;
+}
+
+label ul {
+    z-index: 100;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: 0.25s 0s ease-in-out;
+    transition: 0.25s 0s ease-in-out;
+    list-style: none;
+    line-height: 3.5rem;
+}
+
+label a {
+    margin-bottom: 1em;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-family: "Playfair-display", sans-serif;
+    font-size: 4vmin;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+label a:hover {
+    color: rgb(218, 211, 203);
+}
+
+/*************************************** Responsive Setting **************************************/
+
+@media screen and (max-width: 768px) {
+    .topnav .nav-link {
+        display: none;
+    }
+
+    .logo img {
+        width: 130px;
+        margin-top: 15px;
+    }
+
+    .centered-logo {
+        margin-left: -70%;
+        margin-top: -30px;
+    }
+
+    .icon-container {
+        display: block;
+    }
+}
+
+/*************************************** Responsive Setting **************************************/
+
+@media screen and (max-width: 768px) {
+    .topnav .nav-link {
+        display: none;
+    }
+
+    .logo img {
+        width: 130px;
+        margin-top: 15px;
+    }
+
+    .centered-logo {
+        margin-left: -70%;
+        margin-top: -30px;
+    }
+
+    .icon-container {
+        display: block;
+    }
+}
+
+/************************************ Footer **************************************/
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+    text-align: center;
+    font-family: "Karla", sans-serif;
+    color: #ffffff;
+}
+
+.site-footer {
+    background-color: #132642;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5;
+}
+
+.site-footer hr.small {
+    margin: 20px 0;
+}
+
+.site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.site-footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    display: block;
+}
+
+.footer-links a {
+    color: #fff;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block;
+}
+
+.site-footer .social-icons {
+    text-align: right;
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d;
+}
+
+.copyright-text {
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe;
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998;
+}
+
+.social-icons a.twitter:hover {
+    background-color: #e9edee;
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #007bb6;
+}
+
+.social-icons a.dribbble:hover {
+    background-color: #ea4c89;
+}
+
+@media (max-width: 767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600;
+    }
+}
+
+/***************************** Underline Hover **************************************/
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: #ffff;
+}
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/***************************** Icons **************************************/
+
+.social-icons1 {
+    width: 10%;
+    height: 10%;
+}
+
+#text-icon {
+    font-size: larger;
+}
+
+.social-icons2 {
+    width: 18%;
+    height: 40%;
+}
+
+.social-icons3 {
+    width: 24%;
+    height: 40%;
+}
+
+.social-icons4 {
+    width: 50%;
+    height: 30%;
+}
+
+.social-icons5 {
+    width: 20%;
+    height: 30%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anek+Telugu:wght@200&family=Baskervville&family=Cormorant+Garamond:ital,wght@1,500&family=Dosis:wght@500&family=Inconsolata&family=Karla:wght@200&family=Quicksand:wght@500&family=Square+Peg&display=swap");
+
+/* Override UGG site */
+#main {
+    width: 100%;
+    padding: 0;
+}
+.content-asset p {
+    margin: 0 auto;
+}
+.breadcrumb {
+    display: none;
+}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {
+    padding-top: 10px;
+}
+.margin-bot-10 {
+    padding-bottom: 10px;
+}
+
+/* Typography */
+/**************************/
+#parallax-world-of-ugg h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+#parallax-world-of-ugg h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 10;
+    opacity: 0.9;
+    word-wrap: break-word;
+}
+
+#parallax-world-of-ugg h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    line-height: 0;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: black;
+}
+
+#parallax-world-of-ugg p {
+    font-family: "Karla", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 45px;
+}
+
+.first-character {
+    font-weight: 400;
+    float: left;
+    font-size: 84px;
+    line-height: 64px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: "Baskervville", serif;
+}
+
+.sc {
+    color: #3b8595;
+}
+.ny {
+    color: #3d3c3a;
+}
+.atw {
+    color: #c48660;
+}
+
+/* Section - Title */
+/**************************/
+#parallax-world-of-ugg .title {
+    background: white;
+    padding: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#parallax-world-of-ugg .title h1 {
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+/* Section - Block */
+/**************************/
+#parallax-world-of-ugg .block {
+    background: white;
+    padding: 60px;
+    width: 820px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#parallax-world-of-ugg .block-gray {
+    background: #f2f2f2;
+    padding: 60px;
+}
+
+#parallax-world-of-ugg .section-overlay-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one {
+    margin: 0;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1590577976322-3d2d6e2130d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#parallax-world-of-ugg .parallax-two {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2021/12/c419pr_--prisma-by-dukas-presseagentur-gmbh-alamy-stock-photo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#parallax-world-of-ugg .parallax-three {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://www.relais-christine.com/_novaimg/galleria/1322430.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+    #parallax-world-of-ugg .block {
+        padding: 40px;
+        width: 620px;
+    }
+}
+@media screen and (max-width: 767px) {
+    #parallax-world-of-ugg .block {
+        padding: 30px;
+        width: 420px;
+    }
+    #parallax-world-of-ugg h2 {
+        font-size: 30px;
+    }
+    #parallax-world-of-ugg .block {
+        padding: 30px;
+    }
+    #parallax-world-of-ugg .parallax-one,
+    #parallax-world-of-ugg .parallax-two,
+    #parallax-world-of-ugg .parallax-three {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+@media screen and (max-width: 479px) {
+    #parallax-world-of-ugg .block {
+        padding: 30px 15px;
+        width: 290px;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anek+Telugu:wght@200&family=Baskervville&family=Cormorant+Garamond:ital,wght@1,500&family=Dosis:wght@500&family=Inconsolata&family=Karla:wght@200&family=Quicksand:wght@500&family=Square+Peg&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/************************************ Dropdown Menu **************************************/
+
+.icon-container {
+    /*Contain the menu icon */
+    position: absolute;
+    right: 0px;
+    top: -100px;
+    z-index: 100;
+    width: 100px;
+    height: 200px;
+    background: transparent;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+label .hamburger {
+    /* Second line of the icon */
+    position: absolute;
+    top: 135px;
+    left: 40px;
+    width: 30px;
+    height: 2px;
+    background: black;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+/* First and Third line of the icon */
+label .hamburger:after,
+label .hamburger:before {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+label .hamburger:before {
+    top: -10px;
+}
+
+label .hamburger:after {
+    bottom: -10px;
+}
+
+label input {
+    display: none;
+} /* the toggle box, when it is clicked, menu will be displayed */
+
+label input:checked + .icon-container {
+    /*Spread out the white background */
+    box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff; /* Bring out the full-size white background when the icon is clicked  */
+    border-radius: 0;
+    background: white !important;
+}
+
+/*Animation of the icon */
+label input:checked + .icon-container .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: black;
+}
+
+label input:checked + .icon-container .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+    background: black;
+}
+
+label input:checked + .icon-container .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+    background: black;
+}
+
+/* Display the menu when click */
+label input:checked + .icon-container + ul {
+    opacity: 1;
+}
+
+label ul {
+    z-index: 200;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: 0.25s 0s ease-in-out;
+    transition: 0.25s 0s ease-in-out;
+    list-style: none;
+    line-height: 3.5rem;
+}
+
+label a {
+    margin-bottom: 1em;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-family: "Karla", sans-serif;
+    font-size: 4vmin;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+label a:hover {
+    color: rgb(218, 211, 203);
+}
+
+#gallerybutton {
+    display: block;
+    border-radius: 10px;
+    margin: 40px;
+    padding: 20px;
+    background-color: #132642;
+    color: #f2f2f2;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+#gallerybutton:hover {
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ff6a6a, #e45959);
+    box-shadow: 18px 18px 41px #6d2b2b, -18px -18px 41px #ff9b9b;
+}
+
+@media only screen and (min-width: 1024px) {
+    #gallerybutton {
+        margin: 0 auto;
+        width: 50%;
+    }
+}
