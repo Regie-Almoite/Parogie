@@ -531,7 +531,7 @@ label a:hover {
 #parallax-world-of-ugg h3 {
     font-family: "Oswald", sans-serif;
     font-size: 14px;
-    line-height: 0;
+    /* line-height: 0; */
     font-weight: 400;
     letter-spacing: 8px;
     text-transform: uppercase;
