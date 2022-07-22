@@ -60,6 +60,10 @@
 
 /************************************ Underline Hover **************************/
 
+/* .navbar {
+    justify-content: start;
+} */
+
 #navbarNavAltMarkup .nav-link {
     display: inline-block;
     position: relative;
