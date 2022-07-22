@@ -7,7 +7,6 @@
     <meta charset="utf-8">
 
     <title> Parogie Boutique Hotel | Contact Page</title>
-
     <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -27,10 +26,13 @@
         />
 
         <link rel="manifest" href="/site.webmanifest" />
-      <!---------- External CSS --------------------->
-      <link rel="stylesheet" href="./css/contactpage.css">
-      <link rel="stylesheet" href="./css/navbarbootstrap.css" />
-      <link rel="stylesheet" href="./css/footeronly.css">
+
+    <!---------- External CSS --------------------->
+    
+    <link rel="stylesheet" href="./css/contactpage.css">
+    <link rel="stylesheet" href="./css/navbarbootstrap.css" />
+    <link rel="stylesheet" href="./css/footeronly.css">
+    
 
 
      <!---------- Bootstrap ----------------------->
@@ -50,10 +52,12 @@
     <!---- Animate on Scroll *optional*------------->
 	 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+
+
 </head>
 <body>
 
-  <section>
+<section>
   
     <!------- Navigation Bar *Web Size*------------->
     <nav
@@ -192,7 +196,7 @@
                  
                     Built for the director of the Paris Opera in the 19th century, the hotel boasts a rich history and has been immortalized in fiction by a selection of the world&#39s finest writers.                  <br><br><br><br>Completed at the turn of the 19th century it has served as an exotic private residence, a salon for epicureans and Champagne lovers… and was even owned by the great novelist Honoré de Balzac – who spent his final days there.A haven of peace and a shining example of Parisian chic, the luxury Paris hotel, is a blend of the elegant and the modern. The 20 rooms at the hotel are sublimely decorated by Anne-Marie Sabatier, and mix a neo-classical style with rich colors, fabrics and contemporary furnishings. Some of the rooms, including the Royal Suite, exhibit stunning views of the Eiffel Tower and across Paris.
                     <br><br>
-                    <!-- Parôgie Boutique Hotel Paris has been home to the world renowned chef, Jerôme Baltazar, for the past twenty years. Here the flagship restaurant bearing his name serves up three Michelin Star modern French cuisine, and is recognized as the standard bearer for iconic, fusion cooking the world over.
+                    <!-- Parôgie Boutique Hotel Paris has been home to the world renowned chef, Pierre Gagnaire, for the past twenty years. Here the flagship restaurant bearing his name serves up three Michelin Star modern French cuisine, and is recognized as the standard bearer for iconic, fusion cooking the world over.
                     
                     Travelling to the hotel could not be simpler: it is just 40 minutes from Roissy Charles de Gaulle International Airport; two minutes from George V or Charles de Gaulle Etoile Metro stations; and just three stops on the RER from Gare du Nord and the Eurostar trains to London.
                     
@@ -441,21 +445,9 @@
             <button class="btn btn-xl-light mx-auto text-center" id="contactbutton">SEND MESSAGE</button>
           </div>
         </form>
-        
-        <div class="my-3 text-center">
-          <h2>Donate today. Lives are at stake.</h2>
-          <h2>HELP WAR VICTIMS IN UKRAINE</h2>
-          <div id="smart-button-container">
-            <div style="text-align: center;">
-              <div id="paypal-button-container"></div>
-            </div>
-          </div>
-        
-        </div>
       </div>
     </div>
 </div>
- 
 
   <!------------- Footer ----------------------->
   <footer class="site-footer">
@@ -542,7 +534,6 @@
   </footer>
 
 
-
   <script src="https://smtpjs.com/v3/smtp.js">
   </script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -557,48 +548,6 @@
   <!------- AOS Initialization ------------->
  <script>AOS.init();</script>
 
-
- <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-        <script>
-          function initPayPalButton() {
-            paypal.Buttons({
-              style: {
-                shape: 'rect',
-                color: 'blue',
-                layout: 'vertical',
-                label: 'paypal',
-                
-              },
-      
-              createOrder: function(data, actions) {
-                return actions.order.create({
-                  purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
-                });
-              },
-      
-              onApprove: function(data, actions) {
-                return actions.order.capture().then(function(orderData) {
-                  
-                  // Full available details
-                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-      
-                  // Show a success message within this page, e.g.
-                  const element = document.getElementById('paypal-button-container');
-                  element.innerHTML = '';
-                  element.innerHTML = '<h3>Thank you for your payment!</h3>';
-      
-                  // Or go to another URL:  actions.redirect('thank_you.html');
-                  
-                });
-              },
-      
-              onError: function(err) {
-                console.log(err);
-              }
-            }).render('#paypal-button-container');
-          }
-          initPayPalButton();
-        </script>
 
   <!------- Javascript Link ----------------->
  <script src="./js/contactpage.js"> </script>
