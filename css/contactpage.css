@@ -718,7 +718,7 @@ input[type="submit"] {
 }
 
 .about-text {
-    padding: 10rem;
+    padding: 1rem;
     text-align: center;
     width: 100%;
     font-size: 20px;
@@ -728,7 +728,7 @@ input[type="submit"] {
 
 .ml2 {
     font-weight: 300;
-    font-size: 8em;
+    font-size: 2.5em;
     font-family: "Pinyon Script", cursive;
 }
 
@@ -736,4 +736,22 @@ input[type="submit"] {
     display: inline-block;
     line-height: 1em;
     font-family: "Pinyon Script", cursive;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-container .about-content-container .about-text {
+        padding: 5rem;
+    }
+    .about-container .about-content-container .ml2 {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .about-container .about-content-container .about-text {
+        padding: 10rem;
+    }
+    .about-container .about-content-container .ml2 {
+        font-size: 8em;
+    }
 }
