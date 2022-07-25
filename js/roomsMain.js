@@ -40,6 +40,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
     {
         image: "./images/roomImg.jpg",
@@ -56,6 +57,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
     {
         image: "./images/roomImg.jpg",
@@ -72,6 +74,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
     {
         image: "./images/roomImg.jpg",
@@ -88,6 +91,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
     {
         image: "./images/roomImg.jpg",
@@ -104,6 +108,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
     {
         image: "./images/roomImg.jpg",
@@ -120,6 +125,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
     {
         image: "./images/roomImg.jpg",
@@ -136,6 +142,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
     {
         image: "./images/roomImg.jpg",
@@ -152,6 +159,7 @@ let roomList = [
             "Air conditioned",
             "Wireless Internet",
         ],
+        isReserved: false,
     },
 ];
 
@@ -161,5 +169,32 @@ displayArrivalDays(monthList, "January");
 displayDepartureDays(monthList, "January");
 displayGuestCount(roomList);
 
-displayRooms(roomList);
+let allReservations = JSON.parse(localStorage.getItem("allReservation"));
+if (allReservations == null) allReservations = [];
+
+let updatedRoomList = roomList.map((room) => {
+    if (allReservations !== []) {
+        for (let x in allReservations) {
+            console.log(
+                allReservations[x].bookData.roomDetails.roomId +
+                    " : roomlistRoom: " +
+                    room.roomId
+            );
+            if (
+                allReservations[x].bookData.roomDetails.roomId === room.roomId
+            ) {
+                room.isReserved = true;
+            }
+        }
+        return room;
+    }
+});
+
+let newListToDisplay = updatedRoomList.filter((room) => {
+    return room.isReserved !== true;
+});
+
+console.log(newListToDisplay);
+
+displayRooms(newListToDisplay);
 bookNow(roomList);

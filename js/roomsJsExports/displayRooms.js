@@ -1,6 +1,6 @@
 // A function that renders all rooms listed
 function displayRooms(rooms) {
-    console.log(rooms);
+    // console.log(rooms);
     let roomListDisplay = document.getElementById("roomList");
     for (let x in rooms) {
         let room = document.createElement("div");
