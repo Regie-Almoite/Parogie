@@ -167,11 +167,11 @@ displayArrivalMonths(monthList);
 displayDepartureMonths(monthList);
 displayArrivalDays(monthList, "January");
 displayDepartureDays(monthList, "January");
-displayGuestCount(roomList);
 
 let allReservations = JSON.parse(localStorage.getItem("allReservation"));
 if (allReservations == null) allReservations = [];
 
+//update the rooms data if it is already resereved or not
 let updatedRoomList = roomList.map((room) => {
     if (allReservations !== []) {
         for (let x in allReservations) {
@@ -190,11 +190,13 @@ let updatedRoomList = roomList.map((room) => {
     }
 });
 
+//filter room list and return the rooms that is not yet reserved
 let newListToDisplay = updatedRoomList.filter((room) => {
     return room.isReserved !== true;
 });
 
 console.log(newListToDisplay);
 
+displayGuestCount(newListToDisplay);
 displayRooms(newListToDisplay);
 bookNow(roomList);
